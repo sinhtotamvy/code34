@@ -61,7 +61,7 @@
         .logo-container img {
             width: 100%;
             height: 100%;
-            object-fit: contain; /* Giúp logo không bị méo hay cắt xén */
+            object-fit: contain;
             padding: 5px;
         }
 
@@ -102,6 +102,8 @@
             border-radius: 12px;
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
 
         .card:hover {
@@ -112,34 +114,54 @@
 
         .card-img-placeholder {
             width: 100%;
-            height: 180px;
+            height: 220px; /* Tăng chiều cao để ảnh hiển thị thoải mái hơn */
             background-color: #1a1a20;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--text-gray);
             border-bottom: 1px solid var(--border-color);
+            overflow: hidden; /* Đảm bảo ảnh không tràn ra ngoài */
         }
         
         .card-img-placeholder img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: cover; /* Quan trọng: lấp đầy khung mà không méo */
+            object-position: top; /* Ưu tiên lấy phần trên của ảnh (thường là thanh tiêu đề phần mềm) */
         }
 
-        .card-content { padding: 20px; }
+        .card-content { 
+            padding: 20px; 
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1; /* Đẩy nút bấm xuống đáy */
+        }
 
         .card-title {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-weight: 600;
             margin-bottom: 10px;
             color: var(--text-white);
         }
 
+        /* Class mới để giới hạn 10 dòng */
+        .card-desc {
+            color: var(--text-gray); 
+            font-size: 0.9rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 10; /* Giới hạn tối đa 10 dòng */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+
         .btn-group {
             display: flex;
             gap: 10px;
-            margin-top: 20px;
+            margin-top: auto; /* Đẩy khối nút bấm xuống cuối cùng của thẻ */
         }
 
         .btn {
@@ -211,8 +233,8 @@
         .qr-image img {
             width: 100%;
             height: 100%;
-            object-fit: contain; /* Đảm bảo mã QR không bị mất góc */
-            background-color: #fff; /* Nền trắng để máy quét QR dễ nhận diện hơn */
+            object-fit: contain; 
+            background-color: #fff; 
         }
 
         footer {
@@ -244,13 +266,13 @@
             <!-- SẢN PHẨM 1 -->
             <div class="card">
                 <div class="card-img-placeholder">
-                    <!-- SAU NÀY LU CÓ ẢNH GIAO DIỆN PHẦN MỀM THÌ THAY LINK VÀO ĐÂY NHÉ -->
+                    <!-- ẢNH GIAO DIỆN PHẦN MỀM 1 -->
                     <img src="https://storage.googleapis.com/menu-tamvy/code34/AppXLVb.png" alt="Giao diện phần mềm">
-                    </div>
+                </div>
                 <div class="card-content">
                     <h3 class="card-title">Phần mềm xử lý văn bản offline</h3>
-                    <p style="color: var(--text-gray); font-size: 0.9rem;">Biến mọi hình ảnh, file PDF scan thành văn bản Word, có khả năng 'đọc' xuyên thấu nội dung file để truy tìm từ khóa theo yêu cầu, không đơn thuần chỉ tìm kiếm bằng tên tệp tin; Tự động trích xuất hàng loạt bảng biểu từ PDF/Word và gộp chung thành một file Excel thống kê chuẩn xác, không cần copy-paste thủ công; Bộ từ điển thông minh giúp tự động rà quét, phát hiện cụm từ sai chính tả. Đổi tên hàng loạt tệp tin theo đúng chuẩn số hiệu, ngày tháng ban hành văn bản hành chính; 
-                    Cho phép cắt, ghép, xoay trang và nén dung lượng tài liệu pdf.</p>
+                    <!-- Thay đổi thẻ p bằng class card-desc -->
+                    <p class="card-desc">Biến mọi hình ảnh, file PDF scan thành văn bản Word, có khả năng 'đọc' xuyên thấu nội dung file để truy tìm từ khóa theo yêu cầu, không đơn thuần chỉ tìm kiếm bằng tên tệp tin; Tự động trích xuất hàng loạt bảng biểu từ PDF/Word và gộp chung thành một file Excel thống kê chuẩn xác, không cần copy-paste thủ công; Bộ từ điển thông minh giúp tự động rà quét, phát hiện cụm từ sai chính tả. Đổi tên hàng loạt tệp tin theo đúng chuẩn số hiệu, ngày tháng ban hành văn bản hành chính; Cho phép cắt, ghép, xoay trang và nén dung lượng tài liệu pdf.</p>
                     <div class="btn-group">
                         <a href="LINK_TAI_PHAN_MEM" target="_blank" class="btn btn-download">Tải Về</a>
                         <a href="LINK_VIDEO_HUONG_DAN" target="_blank" class="btn btn-video">Xem Video</a>
@@ -265,7 +287,7 @@
                 </div>
                 <div class="card-content">
                     <h3 class="card-title">Tên Phần Mềm 02</h3>
-                    <p style="color: var(--text-gray); font-size: 0.9rem;">Mô tả ngắn gọn chức năng của phần mềm tại đây. Giúp người dùng dễ hình dung.</p>
+                    <p class="card-desc">Mô tả ngắn gọn chức năng của phần mềm tại đây. Giúp người dùng dễ hình dung.</p>
                     <div class="btn-group">
                         <a href="LINK_TAI_PHAN_MEM" target="_blank" class="btn btn-download">Tải Về</a>
                         <a href="LINK_VIDEO_HUONG_DAN" target="_blank" class="btn btn-video">Xem Video</a>
