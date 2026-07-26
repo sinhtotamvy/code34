@@ -92,8 +92,16 @@
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            /* Đã sửa ở đây: Cố định luôn chia 2 cột bằng nhau */
+            grid-template-columns: repeat(2, 1fr);
             gap: 30px;
+        }
+
+        /* Đã thêm đoạn này: Tự động chuyển về 1 cột trên màn hình điện thoại */
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .card {
@@ -114,28 +122,28 @@
 
         .card-img-placeholder {
             width: 100%;
-            height: 220px; /* Tăng chiều cao để ảnh hiển thị thoải mái hơn */
+            height: 220px; 
             background-color: #1a1a20;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--text-gray);
             border-bottom: 1px solid var(--border-color);
-            overflow: hidden; /* Đảm bảo ảnh không tràn ra ngoài */
+            overflow: hidden; 
         }
         
         .card-img-placeholder img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Quan trọng: lấp đầy khung mà không méo */
-            object-position: top; /* Ưu tiên lấy phần trên của ảnh (thường là thanh tiêu đề phần mềm) */
+            object-fit: cover; 
+            object-position: top; 
         }
 
         .card-content { 
             padding: 20px; 
             display: flex;
             flex-direction: column;
-            flex-grow: 1; /* Đẩy nút bấm xuống đáy */
+            flex-grow: 1; 
         }
 
         .card-title {
@@ -145,12 +153,11 @@
             color: var(--text-white);
         }
 
-        /* Class mới để giới hạn 10 dòng */
         .card-desc {
             color: var(--text-gray); 
             font-size: 0.9rem;
             display: -webkit-box;
-            -webkit-line-clamp: 10; /* Giới hạn tối đa 10 dòng */
+            -webkit-line-clamp: 10; 
             -webkit-box-orient: vertical;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -161,7 +168,7 @@
         .btn-group {
             display: flex;
             gap: 10px;
-            margin-top: auto; /* Đẩy khối nút bấm xuống cuối cùng của thẻ */
+            margin-top: auto; 
         }
 
         .btn {
@@ -251,7 +258,6 @@
     <!-- PHẦN HEADER & LOGO -->
     <header>
         <div class="logo-container">
-            <!-- ĐÃ CHÈN LOGO CODE34 -->
             <img src="https://storage.googleapis.com/menu-tamvy/code34/logocode34.png" alt="Code34 Logo">
         </div>
         <h1>CODE34</h1>
@@ -266,12 +272,10 @@
             <!-- SẢN PHẨM 1 -->
             <div class="card">
                 <div class="card-img-placeholder">
-                    <!-- ẢNH GIAO DIỆN PHẦN MỀM 1 -->
                     <img src="https://storage.googleapis.com/menu-tamvy/code34/AppXLVb.png" alt="Giao diện phần mềm">
                 </div>
                 <div class="card-content">
                     <h3 class="card-title">Phần mềm xử lý văn bản offline</h3>
-                    <!-- Thay đổi thẻ p bằng class card-desc -->
                     <p class="card-desc">Biến mọi hình ảnh, file PDF scan thành văn bản Word, có khả năng 'đọc' xuyên thấu nội dung file để truy tìm từ khóa theo yêu cầu, không đơn thuần chỉ tìm kiếm bằng tên tệp tin; Tự động trích xuất hàng loạt bảng biểu từ PDF/Word và gộp chung thành một file Excel thống kê chuẩn xác, không cần copy-paste thủ công; Bộ từ điển thông minh giúp tự động rà quét, phát hiện cụm từ sai chính tả. Đổi tên hàng loạt tệp tin theo đúng chuẩn số hiệu, ngày tháng ban hành văn bản hành chính; Cho phép cắt, ghép, xoay trang và nén dung lượng tài liệu pdf.</p>
                     <div class="btn-group">
                         <a href="https://drive.google.com/drive/folders/1Zbk7JNYkOAZd_X7bnu9b4u85VKDz6EYF?usp=sharing" target="_blank" class="btn btn-download">Tải Về</a>
@@ -283,12 +287,10 @@
             <!-- SẢN PHẨM 2 -->
             <div class="card">
                 <div class="card-img-placeholder">
-                    <!-- ẢNH GIAO DIỆN MÁY BƠM NHU ĐỘNG -->
                     <img src="https://storage.googleapis.com/menu-tamvy/code34/may_bom_nhu_dong_v3.jpg" alt="Giao diện máy bơm">
                 </div>
                 <div class="card-content">
                     <h3 class="card-title">Máy bơm nhu động thực phẩm</h3>
-                    <!-- Thay đổi thẻ p bằng class card-desc -->
                     <p class="card-desc">Khác biệt lớn nhất của máy bơm nhu động so với máy bơm thông thường là chất lỏng chỉ di chuyển bên trong ống dẫn, cách ly hoàn toàn khỏi các bộ phận cơ học. Cơ chế này giúp triệt tiêu hoàn toàn rủi ro nhiễm chéo, đáp ứng các tiêu chuẩn khắt khe nhất về an toàn thực phẩm và xử lý hóa chất. Bên cạnh đó, máy sở hữu tốc độ chiết rót ấn tượng với lưu lượng đạt 40ml chất lỏng chỉ trong 1 giây. Đây là giải pháp tối ưu cho các hệ thống đòi hỏi độ sạch, tính ổn định và định lượng chuẩn xác.</p>
                     <div class="btn-group">
                         <a href="https://zalo.me/84769657798" target="_blank" class="btn btn-download">Liên hệ đặt mua</a>
@@ -300,12 +302,10 @@
             <!-- SẢN PHẨM 3 -->
             <div class="card">
                 <div class="card-img-placeholder">
-                    <!-- ẢNH GIAO DIỆN WEB MENU -->
                     <img src="https://storage.googleapis.com/menu-tamvy/giao_dien_tam_vy.png" alt="Giao diện web menu">
                 </div>
                 <div class="card-content">
                     <h3 class="card-title">Web menu order nhỏ lẻ cho HKD </h3>
-                    <!-- Thay đổi thẻ p bằng class card-desc -->
                     <p class="card-desc">Web menu đặt hàng đơn giản có chức năng tính phí ship theo quảng đường giao hàng, thông báo đơn cho shop qua tin nhắn, lưu thông tin đơn hàng trong Google Sheet.</p>
                     <div class="btn-group">
                         <a href="https://zalo.me/84769657798" target="_blank" class="btn btn-download">Liên hệ đặt thiết kế</a>
@@ -325,7 +325,6 @@
             <div class="qr-box">
                 <h3>Quét Zalo Liên Hệ</h3>
                 <div class="qr-image">
-                    <!-- ĐÃ CHÈN QR ZALO -->
                     <img src="https://storage.googleapis.com/menu-tamvy/code34/zalocode34.jpg" alt="QR Zalo Code34">
                 </div>
                 <p style="color: var(--text-gray); font-size: 0.85rem;">Quét mã để trao đổi trực tiếp với mìn 🤓</p>
@@ -335,7 +334,6 @@
             <div class="qr-box">
                 <h3>Ủng Hộ Code34</h3>
                 <div class="qr-image">
-                    <!-- ĐÃ CHÈN QR NGÂN HÀNG BIDV -->
                     <img src="https://storage.googleapis.com/menu-tamvy/code34/bidvcode34.jpg" alt="QR Ngân Hàng BIDV Code34">
                 </div>
                 <p style="color: var(--text-gray); font-size: 0.85rem;">donate cho mìn một ly cà phê nhó 🫡</p>
