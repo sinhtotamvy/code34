@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050912">
+  <meta name="description" content="Không gian trưng bày sản phẩm CODE34: phần mềm, Web Order, cẩm nang và sản phẩm ứng dụng thực tế.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="vi_VN">
+  <meta property="og:site_name" content="CODE34">
+  <meta property="og:title" content="CODE34 — Không gian sản phẩm">
+  <meta property="og:description" content="Xem những sản phẩm CODE34 đã thực hiện và cách chúng được dùng trong công việc thực tế.">
+  <meta property="og:image" content="https://storage.googleapis.com/menu-tamvy/code34/thumnailcode34_1.png">
+  <meta property="og:image:secure_url" content="https://storage.googleapis.com/menu-tamvy/code34/thumnailcode34_1.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1672">
+  <meta property="og:image:height" content="941">
+  <meta property="og:image:alt" content="CODE34 — Không gian sản phẩm">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CODE34 — Không gian sản phẩm">
+  <meta name="twitter:description" content="Phần mềm, Web Order, cẩm nang và sản phẩm ứng dụng do CODE34 thực hiện.">
+  <meta name="twitter:image" content="https://storage.googleapis.com/menu-tamvy/code34/thumnailcode34_1.png">
+  <title>CODE34 — Không gian sản phẩm</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&amp;family=Sora:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#f4f8fb;--muted:#9fb2c2;--bg:#050912;--panel:#0a1725;
+      --line:rgba(174,213,235,.15);--line-strong:rgba(174,224,247,.3);
+      --cyan:#19bff2;--cyan-2:#74e2ff;--pink:#eb3f8f;--pink-2:#ff78b8;
+      --container:1240px;--radius:26px
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:86px}
+    body{margin:0;color:var(--ink);background:
+      radial-gradient(circle at 12% 8%,rgba(21,126,194,.13),transparent 27rem),
+      radial-gradient(circle at 92% 30%,rgba(219,40,119,.09),transparent 30rem),
+      var(--bg);font-family:"Be Vietnam Pro","Segoe UI",sans-serif;font-size:16px;line-height:1.7;text-rendering:optimizeLegibility}
+    body.nav-open{overflow:hidden}
+    img,video{display:block;max-width:100%}a{color:inherit}button{font:inherit}
+    h1,h2,h3,p{margin-top:0}
+    h1,h2,h3{font-family:"Sora","Be Vietnam Pro",sans-serif;line-height:1.12;letter-spacing:-.035em}
+    h1{font-size:clamp(3rem,7.4vw,7rem);font-weight:700}
+    h2{font-size:clamp(2rem,4.4vw,4rem);font-weight:600}
+    h3{font-size:clamp(1.7rem,3vw,2.7rem);font-weight:600}
+    .container{width:min(calc(100% - 48px),var(--container));margin-inline:auto}
+    .skip-link{position:fixed;z-index:999;top:-90px;left:16px;padding:10px 15px;color:#fff;background:var(--pink);border-radius:8px}.skip-link:focus{top:14px}
+    .eyebrow{margin-bottom:14px;color:var(--cyan-2);font-family:"Sora",sans-serif;font-size:.76rem;font-weight:600;letter-spacing:.17em;text-transform:uppercase}
+    .button{display:inline-flex;min-height:48px;align-items:center;justify-content:center;gap:9px;padding:11px 20px;border:1px solid transparent;border-radius:10px;font-size:.91rem;font-weight:600;line-height:1.25;text-decoration:none;transition:transform .2s ease,background .2s ease,border-color .2s ease,box-shadow .2s ease}
+    .button:hover{transform:translateY(-2px)}
+    .button svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8}
+    .button-primary{color:#03121d;background:linear-gradient(135deg,var(--cyan-2),var(--cyan));box-shadow:0 9px 28px rgba(25,191,242,.2)}
+    .button-primary:hover{box-shadow:0 12px 34px rgba(25,191,242,.34)}
+    .button-pink{color:#fff;background:linear-gradient(135deg,var(--pink-2),var(--pink));box-shadow:0 9px 28px rgba(235,63,143,.16)}
+    .button-pink:hover{box-shadow:0 12px 34px rgba(235,63,143,.3)}
+    .button-ghost{color:#d5e3eb;background:rgba(255,255,255,.035);border-color:var(--line-strong)}
+    .button-ghost:hover{color:#fff;background:rgba(255,255,255,.075);border-color:rgba(116,226,255,.52)}
+
+    .site-header{position:sticky;z-index:100;top:0;background:rgba(5,9,18,.86);border-bottom:1px solid var(--line);backdrop-filter:blur(20px)}
+    .nav-wrap{display:flex;min-height:78px;align-items:center;gap:28px}
+    .brand{display:inline-flex;width:168px;flex:0 0 auto;align-items:center}.brand img{width:100%;height:50px;object-fit:contain;object-position:left center}
+    .nav-links{display:flex;align-items:center;gap:2px;margin-left:auto}
+    .nav-links a{padding:9px 11px;color:#a9bccb;border-radius:8px;font-size:.84rem;font-weight:500;text-decoration:none}
+    .nav-links a:hover{color:#fff;background:rgba(255,255,255,.06)}
+    .nav-contact{margin-left:8px!important;color:#fff!important;border:1px solid rgba(116,226,255,.3)}
+    .menu-button{display:none;width:43px;height:43px;margin-left:auto;place-items:center;color:#fff;background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:9px}
+    .menu-button svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:2}
+
+    .hero{position:relative;isolation:isolate;overflow:hidden;border-bottom:1px solid var(--line)}
+    .hero:before{position:absolute;z-index:-2;inset:0;content:"";background:
+      linear-gradient(rgba(128,194,226,.035) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(128,194,226,.035) 1px,transparent 1px);background-size:72px 72px;mask-image:linear-gradient(to bottom,#000,transparent 92%)}
+    .hero:after{position:absolute;z-index:-1;right:-10%;bottom:-48%;width:760px;height:760px;content:"";background:radial-gradient(circle,rgba(26,184,235,.17),rgba(63,74,216,.07) 34%,rgba(235,63,143,.05) 52%,transparent 69%);filter:blur(12px)}
+    .hero-grid{display:grid;min-height:610px;grid-template-columns:minmax(0,1.08fr) minmax(330px,.66fr);align-items:center;gap:54px;padding-block:68px 52px}
+    .hero-copy{position:relative;z-index:2;max-width:800px}
+    .hero h1{max-width:850px;margin-bottom:25px;background:linear-gradient(110deg,#fff 0 53%,#81e8ff 72%,#ff8bc0 100%);background-clip:text;-webkit-background-clip:text;color:transparent}
+    .hero-lead{max-width:630px;margin-bottom:0;color:#b4c6d3;font-size:clamp(1.02rem,1.65vw,1.18rem)}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:30px}
+    .hero-visual{position:relative;min-height:510px}
+    .hero-visual:before{position:absolute;inset:8% -5% 4% 4%;content:"";border:1px solid rgba(116,226,255,.2);border-radius:48% 52% 28% 35%;background:radial-gradient(circle at 52% 48%,rgba(27,191,242,.2),rgba(34,88,177,.08) 42%,transparent 67%);box-shadow:0 0 90px rgba(22,184,233,.11),inset 0 0 60px rgba(26,184,235,.05)}
+    .hero-visual:after{position:absolute;right:8%;bottom:3%;left:8%;height:1px;content:"";background:linear-gradient(90deg,transparent,var(--cyan-2),var(--pink),transparent);box-shadow:0 0 25px var(--cyan)}
+    .mascot{position:absolute;right:0;bottom:-2%;width:min(420px,100%);max-height:540px;object-fit:contain;filter:drop-shadow(0 28px 36px rgba(0,0,0,.46)) drop-shadow(0 0 18px rgba(26,184,235,.13))}
+    .collection-nav{border-bottom:1px solid var(--line);background:rgba(8,17,28,.82)}
+    .collection-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+    .collection-link{position:relative;padding:22px 24px;color:#8fa5b5;border-right:1px solid var(--line);font-size:.82rem;text-decoration:none;transition:.2s ease}
+    .collection-link:last-child{border-right:0}
+    .collection-link span{display:block;margin-bottom:3px;color:#eef6fa;font-family:"Sora",sans-serif;font-size:.95rem;font-weight:600}
+    .collection-link:hover{color:#c5d5df;background:rgba(255,255,255,.03)}.collection-link:hover span{color:var(--cyan-2)}
+
+    .gallery-section{position:relative;padding:104px 0}
+    .gallery-section+.gallery-section{border-top:1px solid var(--line)}
+    .section-head{display:grid;grid-template-columns:minmax(0,.8fr) minmax(280px,.55fr);align-items:end;gap:50px;margin-bottom:44px}
+    .section-head h2{max-width:760px;margin-bottom:0}
+    .section-intro{margin-bottom:5px;color:var(--muted);font-size:1rem}
+    .product-list{display:grid;gap:38px}
+    .product-card{--glow-a:rgba(25,191,242,.34);--glow-b:rgba(235,63,143,.23);position:relative;display:grid;min-height:535px;grid-template-columns:minmax(0,1.08fr) minmax(390px,.92fr);overflow:hidden;background:linear-gradient(135deg,rgba(13,29,45,.92),rgba(6,15,25,.96));border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 28px 70px rgba(0,0,0,.28)}
+    .product-card.reverse{grid-template-columns:minmax(390px,.92fr) minmax(0,1.08fr)}
+    .product-card.reverse .product-stage{order:2}.product-card.reverse .product-info{order:1}
+    .product-card:before{position:absolute;z-index:3;top:0;right:10%;left:10%;height:1px;content:"";background:linear-gradient(90deg,transparent,var(--cyan-2),var(--pink-2),transparent);opacity:.65}
+    .product-stage{position:relative;isolation:isolate;display:grid;min-height:535px;place-items:center;overflow:hidden;padding:48px;border-right:1px solid var(--line);background:rgba(2,8,14,.5)}
+    .product-card.reverse .product-stage{border-right:0;border-left:1px solid var(--line)}
+    .product-stage:before{position:absolute;z-index:-2;width:min(70%,520px);aspect-ratio:1;content:"";border-radius:50%;background:radial-gradient(circle,var(--glow-a) 0,rgba(25,191,242,.13) 26%,var(--glow-b) 47%,transparent 70%);filter:blur(20px);animation:breathe 7s ease-in-out infinite}
+    .product-stage:after{position:absolute;z-index:-1;width:min(72%,540px);aspect-ratio:1;content:"";border:1px solid rgba(116,226,255,.2);border-radius:50%;box-shadow:0 0 55px rgba(25,191,242,.1),inset 0 0 48px rgba(235,63,143,.035)}
+    .product-stage img{position:relative;width:100%;height:100%;max-height:430px;object-fit:contain;filter:drop-shadow(0 28px 36px rgba(0,0,0,.46))}
+    .product-stage.phone img{padding:14px}.product-stage.poster img{padding:8px}
+    .product-stage video{position:relative;width:100%;max-height:420px;object-fit:contain;background:#02070c;border:1px solid rgba(174,224,247,.17);border-radius:14px;box-shadow:0 24px 50px rgba(0,0,0,.48),0 0 40px rgba(25,191,242,.08)}
+    .product-info{display:flex;flex-direction:column;justify-content:center;padding:clamp(36px,5.5vw,72px)}
+    .product-number{display:flex;align-items:center;gap:12px;margin-bottom:18px;color:#7590a2;font-family:"Sora",sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+    .product-number:before{width:34px;height:1px;content:"";background:linear-gradient(90deg,var(--cyan),var(--pink))}
+    .product-info h3{margin-bottom:17px}
+    .product-summary{margin-bottom:22px;color:#bdccd6;font-size:1.02rem;line-height:1.75}
+    .plain-answer{margin-bottom:24px;padding:15px 17px;color:#dce7ed;background:rgba(255,255,255,.035);border:1px solid var(--line);border-left:3px solid var(--cyan);border-radius:4px 10px 10px 4px;font-size:.91rem}
+    .plain-answer strong{color:var(--cyan-2);font-weight:600}
+    .tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:27px}
+    .tag{padding:6px 10px;color:#9eb5c4;background:rgba(127,180,210,.075);border:1px solid rgba(174,224,247,.11);border-radius:999px;font-family:"Sora",sans-serif;font-size:.66rem;font-weight:500;letter-spacing:.035em}
+    .product-actions{display:flex;flex-wrap:wrap;gap:10px}
+
+    .docs-showcase{position:relative;display:grid;min-height:500px;grid-template-columns:minmax(0,1.16fr) minmax(350px,.84fr);margin-top:38px;overflow:hidden;background:linear-gradient(135deg,#081b2b,#07111d 62%,#170b1b);border:1px solid rgba(116,226,255,.19);border-radius:var(--radius);box-shadow:0 30px 80px rgba(0,0,0,.32)}
+    .docs-visual{position:relative;isolation:isolate;display:grid;min-height:500px;place-items:center;padding:34px;overflow:hidden;background:#03080e}
+    .docs-visual:before{position:absolute;z-index:-1;width:72%;aspect-ratio:1;content:"";border-radius:50%;background:radial-gradient(circle,rgba(235,63,143,.26),rgba(25,191,242,.19) 35%,transparent 68%);filter:blur(22px)}
+    .docs-visual:after{position:absolute;inset:24px;content:"";border:1px solid rgba(116,226,255,.22);border-radius:18px;box-shadow:inset 0 0 55px rgba(25,191,242,.05)}
+    .docs-visual img{width:100%;height:100%;max-height:445px;object-fit:contain;filter:drop-shadow(0 26px 35px rgba(0,0,0,.55))}
+    .docs-info{display:flex;flex-direction:column;justify-content:center;padding:clamp(34px,5vw,62px)}
+    .docs-info h3{margin-bottom:15px}.docs-info>p:not(.eyebrow){margin-bottom:25px;color:#aebfca}
+    .doc-links{display:grid;gap:10px}
+    .doc-link{display:grid;grid-template-columns:1fr auto;align-items:center;gap:18px;padding:16px 17px;color:#fff;background:rgba(255,255,255,.045);border:1px solid var(--line);border-radius:10px;text-decoration:none;transition:.2s ease}
+    .doc-link:hover{background:rgba(255,255,255,.08);border-color:rgba(116,226,255,.44);transform:translateX(3px)}
+    .doc-link strong{display:block;font-size:.91rem}.doc-link small{display:block;margin-top:2px;color:#7f97a7;font-size:.76rem}.doc-link svg{width:19px;height:19px;fill:none;stroke:var(--cyan-2);stroke-width:1.8}
+
+    .cta-section{padding:0 0 104px}
+    .cta-panel{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:32px;overflow:hidden;padding:44px 48px;background:linear-gradient(118deg,#0c2235,#0a1725 66%,#211020);border:1px solid var(--line-strong);border-radius:20px}
+    .cta-panel:after{position:absolute;right:-100px;width:310px;height:310px;content:"";border-radius:50%;background:radial-gradient(circle,rgba(235,63,143,.2),transparent 68%)}
+    .cta-panel>*,.cta-panel .button{position:relative;z-index:1}.cta-panel h2{margin-bottom:10px;font-size:clamp(1.8rem,3.4vw,3rem)}.cta-panel p{max-width:700px;margin-bottom:0;color:#9fb1bd}
+
+    footer{color:#8da3b2;background:#03070c;border-top:1px solid var(--line)}
+    .footer-grid{display:grid;grid-template-columns:1.2fr .65fr .55fr;gap:46px;padding-block:50px}
+    .footer-logo{width:185px;margin-bottom:15px}.footer-brand p{max-width:440px;color:#778e9e;font-size:.89rem}
+    .footer-col h3{margin-bottom:14px;color:#dce8ee;font-family:"Sora",sans-serif;font-size:.85rem;letter-spacing:0}
+    .footer-col a{display:block;width:fit-content;margin:8px 0;color:#8198a8;font-size:.83rem;text-decoration:none}.footer-col a:hover{color:var(--cyan-2)}
+    .visit-counter span{display:block;color:#728999;font-family:"Sora",sans-serif;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+    .visit-number{min-height:42px;margin-top:5px;color:#fff;font-family:"Sora",sans-serif;font-size:2rem;font-weight:600}
+    .footer-bottom{display:flex;justify-content:space-between;gap:20px;padding:18px 0;border-top:1px solid var(--line);color:#5f7483;font-size:.7rem}
+
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease}.reveal.visible{opacity:1;transform:none}
+    @keyframes breathe{0%,100%{transform:scale(.94);opacity:.8}50%{transform:scale(1.05);opacity:1}}
+    @media(max-width:1040px){
+      .nav-links{position:fixed;top:78px;right:0;bottom:0;width:min(340px,88vw);flex-direction:column;align-items:stretch;padding:18px;background:rgba(5,12,21,.98);box-shadow:-18px 24px 44px rgba(0,0,0,.35);transform:translateX(105%);transition:transform .22s ease}.nav-links.open{transform:none}.nav-links a{padding:13px 14px}.nav-contact{margin:6px 0 0!important;text-align:center}.menu-button{display:grid}
+      .product-card,.product-card.reverse{grid-template-columns:minmax(0,.94fr) minmax(350px,1.06fr)}
+      .docs-showcase{grid-template-columns:1fr}.docs-visual{min-height:560px}
+    }
+    @media(max-width:820px){
+      .container{width:min(calc(100% - 30px),var(--container))}.hero-grid{min-height:0;grid-template-columns:1fr;padding-top:62px}.hero-copy{text-align:center}.hero-lead{margin-inline:auto}.hero-actions{justify-content:center}.hero-visual{width:min(430px,100%);min-height:500px;margin-inline:auto}
+      .collection-grid{grid-template-columns:repeat(2,1fr)}.collection-link:nth-child(2){border-right:0}.collection-link:nth-child(-n+2){border-bottom:1px solid var(--line)}
+      .gallery-section{padding:78px 0}.section-head{grid-template-columns:1fr;gap:15px;margin-bottom:34px}
+      .product-card,.product-card.reverse{grid-template-columns:1fr}.product-card .product-stage,.product-card.reverse .product-stage{order:1;min-height:450px;border:0;border-bottom:1px solid var(--line)}.product-card .product-info,.product-card.reverse .product-info{order:2}.product-info{padding:36px 31px 40px}
+      .docs-visual{min-height:470px}.docs-info{padding:36px 30px 40px}.cta-panel{grid-template-columns:1fr;padding:38px 32px}.footer-grid{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}
+    }
+    @media(max-width:560px){
+      .brand{width:148px}.hero-grid{padding-top:48px}.hero h1{font-size:clamp(2.65rem,15vw,4.3rem)}.hero-actions .button,.product-actions .button{width:100%}.hero-visual{min-height:425px}
+      .collection-link{padding:17px 15px}.collection-link span{font-size:.83rem}.collection-link{font-size:.72rem}
+      .product-card{border-radius:18px}.product-stage{min-height:340px!important;padding:27px}.product-stage.phone img,.product-stage.poster img{padding:0}.product-info{padding:29px 23px 32px}.product-summary{font-size:.96rem}.plain-answer{font-size:.86rem}
+      .docs-showcase{border-radius:18px}.docs-visual{min-height:390px;padding:22px}.docs-visual:after{inset:15px}.doc-link{padding:14px}.doc-link small{font-size:.72rem}
+      .footer-grid{grid-template-columns:1fr}.footer-brand{grid-column:auto}.footer-bottom{flex-direction:column}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#noi-dung">Đi đến nội dung chính</a>
+  <svg aria-hidden="true" width="0" height="0" style="position:absolute">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M14 7l5 5-5 5"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 13v7H4V6h7"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#dau-trang" aria-label="CODE34 - Trang chủ"><img src="assets/code34-logo.webp" alt="CODE34"></a>
+      <nav class="nav-links" id="nav-links" aria-label="Điều hướng chính">
+        <a href="#phan-mem">Phần mềm</a><a href="#web-order">Web Order</a><a href="#cam-nang">Cẩm nang</a><a href="#san-pham-thuc-te">Sản phẩm thực tế</a>
+        <a class="nav-contact" href="https://zalo.me/84769657798" target="_blank" rel="noopener noreferrer">Liên hệ CODE34</a>
+      </nav>
+      <button class="menu-button" id="menu-button" type="button" aria-label="Mở menu" aria-expanded="false" aria-controls="nav-links"><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
+    </div>
+  </header>
+
+  <main id="noi-dung">
+    <section class="hero" id="dau-trang">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Bộ sưu tập CODE34</p>
+          <h1>Không gian sản phẩm.</h1>
+          <p class="hero-lead">Phần mềm, Web Order, cẩm nang và những sản phẩm đã được CODE34 đưa vào sử dụng thực tế.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#phan-mem">Bắt đầu xem <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="button button-ghost" href="https://zalo.me/84769657798" target="_blank" rel="noopener noreferrer">Liên hệ qua Zalo</a>
+          </div>
+        </div>
+        <div class="hero-visual"><img class="mascot" src="assets/be-sen-phone.png" alt="Bé Sen"></div>
+      </div>
+    </section>
+
+    <nav class="collection-nav" aria-label="Danh mục sản phẩm">
+      <div class="container collection-grid">
+        <a class="collection-link" href="#phan-mem"><span>Phần mềm</span>Xử lý công việc văn phòng</a>
+        <a class="collection-link" href="#web-order"><span>Web Order</span>Web order và quản lý đơn cho HKD dưới 1 tỷ</a>
+        <a class="collection-link" href="#cam-nang"><span>Cẩm nang</span>Thiết kế cẩm nang - infographic</a>
+        <a class="collection-link" href="#san-pham-thuc-te"><span>Sản phẩm thực tế</span>Thiết bị và thực phẩm</a>
+      </div>
+    </nav>
+
+    <section class="gallery-section" id="phan-mem">
+      <div class="container">
+        <header class="section-head reveal">
+          <div><p class="eyebrow">01 · Phần mềm</p><h2>Viết phần mềm xử lý văn bản.</h2></div>
+          <p class="section-intro">Dành cho người làm hồ sơ, báo cáo và dữ liệu trên máy tính Windows.</p>
+        </header>
+        <div class="product-list">
+          <article class="product-card reveal">
+            <div class="product-stage"><img src="assets/xlvb-product.png" alt="Công cụ Trợ lý hành chính CODE34"></div>
+            <div class="product-info">
+              <p class="product-number">Sản phẩm 01 / 07</p>
+              <h3>Công cụ Trợ lý hành chính</h3>
+              <p class="product-summary">Một phần mềm Windows giúp xử lý PDF, Word, Excel, tìm kiếm tài liệu, QR, mã kiểm tra và nén tệp trong cùng một giao diện.</p>
+              <div class="plain-answer"><strong>Dùng khi:</strong> Cần xử lý nhiều hồ sơ nhưng không muốn đổi qua lại giữa nhiều phần mềm.</div>
+              <div class="tags"><span class="tag">CHẠY OFFLINE</span><span class="tag">PDF &amp; OCR</span><span class="tag">WORD &amp; EXCEL</span><span class="tag">QR &amp; HASH</span></div>
+              <div class="product-actions">
+                <a class="button button-primary" href="https://code34vietnam.github.io/xlvb/" target="_blank" rel="noopener noreferrer">Xem sản phẩm <svg aria-hidden="true"><use href="#i-external"/></svg></a>
+                <a class="button button-pink" href="https://zalo.me/84769657798" target="_blank" rel="noopener noreferrer">Liên hệ đặt hàng</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section" id="web-order">
+      <div class="container">
+        <header class="section-head reveal">
+          <div><p class="eyebrow">02 · Web Order</p><h2>Thiết kế Web order - Cho quán HKD dưới 1 tỷ.</h2></div>
+          <p class="section-intro">Mở bằng đường dẫn trên điện thoại, không cần cài thêm ứng dụng.</p>
+        </header>
+        <div class="product-list">
+          <article class="product-card reveal">
+            <div class="product-stage phone"><img src="assets/sinhtotamvy.png" alt="Menu trực tuyến Sinh Tố Tâm Vy" loading="lazy"></div>
+            <div class="product-info">
+              <p class="product-number">Sản phẩm 02 / 07</p>
+              <h3>Menu trực tuyến Sinh Tố Tâm Vy</h3>
+              <p class="product-summary">Khách tự xem món, chọn đường đá, kiểm tra phí giao và gửi đơn ngay trên điện thoại.</p>
+              <div class="plain-answer"><strong>Dùng khi:</strong> Quán nhận đơn online và muốn bớt thời gian hỏi lại từng món qua tin nhắn.</div>
+              <div class="tags"><span class="tag">MENU ONLINE</span><span class="tag">TÙY CHỌN MÓN</span><span class="tag">BÁO ĐƠN</span></div>
+              <div class="product-actions">
+                <a class="button button-primary" href="https://sinhtotamvy.github.io/menu/" target="_blank" rel="noopener noreferrer">Xem sản phẩm <svg aria-hidden="true"><use href="#i-external"/></svg></a>
+                <a class="button button-pink" href="https://zalo.me/84769657798" target="_blank" rel="noopener noreferrer">Liên hệ đặt hàng</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reverse reveal">
+            <div class="product-stage phone"><img src="assets/cocoffee.png" alt="Web App Order CỌ Coffee" loading="lazy"></div>
+            <div class="product-info">
+              <p class="product-number">Sản phẩm 03 / 07</p>
+              <h3>Web App Order CỌ Coffee</h3>
+              <p class="product-summary">Khách hoặc nhân viên tạo đơn; quán sửa đơn, xuất bill, nhận tiền bằng VietQR, kết ca và xem doanh thu.</p>
+              <div class="plain-answer"><strong>Dùng khi:</strong> Nhiều người cùng nhận đơn và quán cần biết rõ ai đã tạo, sửa hay tính tiền.</div>
+              <div class="tags"><span class="tag">ĐƠN TRONG CA</span><span class="tag">BILL &amp; VIETQR</span><span class="tag">KẾT CA</span></div>
+              <div class="product-actions">
+                <a class="button button-primary" href="https://cafevietnam.github.io/cocoffee/" target="_blank" rel="noopener noreferrer">Xem sản phẩm <svg aria-hidden="true"><use href="#i-external"/></svg></a>
+                <a class="button button-pink" href="https://zalo.me/84769657798" target="_blank" rel="noopener noreferrer">Liên hệ đặt hàng</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <aside class="docs-showcase reveal" aria-labelledby="docs-title">
+          <div class="docs-visual"><img src="assets/don-trong-ca.gif" alt="Màn hình quản lý đơn trong ca của Web Order" loading="lazy"></div>
+          <div class="docs-info">
+            <p class="eyebrow">Xem trước khi chọn</p>
+            <h3 id="docs-title">Web Order vận hành ra sao?</h3>
+            <p>Xem trọn quy trình nhận đơn, sửa đơn, tính tiền và kết ca qua hai tài liệu trực quan.</p>
+            <div class="doc-links">
+              <a class="doc-link" href="docs/gioi-thieu-web-order-code34.pdf" target="_blank" rel="noopener noreferrer"><span><strong>Xem bản giới thiệu tính năng</strong><small>Biết hệ thống làm được gì</small></span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              <a class="doc-link" href="docs/huong-dan-web-order-code34.pdf" target="_blank" rel="noopener noreferrer"><span><strong>Xem hướng dẫn sử dụng</strong><small>Biết từng bước thao tác</small></span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="gallery-section" id="cam-nang">
+      <div class="container">
+        <header class="section-head reveal">
+          <div><p class="eyebrow">03 · Cẩm nang</p><h2>Thiết kế cẩm nang - infographic.</h2></div>
+          <p class="section-intro">Dùng để tự kiểm tra, chia sẻ cho người thân hoặc làm tài liệu tuyên truyền.</p>
+        </header>
+        <div class="product-list">
+          <article class="product-card reveal">
+            <div class="product-stage poster"><img src="assets/camnang-an-toan.png" alt="Cẩm nang An toàn trực tuyến" loading="lazy"></div>
+            <div class="product-info">
+              <p class="product-number">Sản phẩm 04 / 07</p>
+              <h3>Cẩm nang An toàn trực tuyến</h3>
+              <p class="product-summary">Chỉ cách nhận ra đường link giả, ứng dụng lạ, cuộc gọi mạo danh và những bẫy chuyển tiền thường gặp.</p>
+              <div class="plain-answer"><strong>Dùng khi:</strong> Cần kiểm tra một tình huống đáng ngờ hoặc hướng dẫn người thân dùng Internet an toàn.</div>
+              <div class="tags"><span class="tag">NHẬN DIỆN LỪA ĐẢO</span><span class="tag">BẢO VỆ TÀI KHOẢN</span></div>
+              <div class="product-actions">
+                <a class="button button-primary" href="https://www.gocnhinanninhmang.vn/2024/04/cam-nang-toan-truc-tuyen.html" target="_blank" rel="noopener noreferrer">Xem cẩm nang <svg aria-hidden="true"><use href="#i-external"/></svg></a>
+                <a class="button button-pink" href="https://zalo.me/84769657798" target="_blank" rel="noopener noreferrer">Liên hệ đặt hàng</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reverse reveal">
+            <div class="product-stage poster"><img src="assets/camnang-tin-gia.png" alt="Cẩm nang nhận diện tin giả" loading="lazy"></div>
+            <div class="product-info">
+              <p class="product-number">Sản phẩm 05 / 07</p>
+              <h3>Cẩm nang nhận diện tin giả</h3>
+              <p class="product-summary">Giúp nhận biết nội dung bị cắt ghép, đổi bối cảnh hoặc cố tình kích động cảm xúc để dẫn dắt người đọc.</p>
+              <div class="plain-answer"><strong>Dùng khi:</strong> Gặp một bài viết gây sốc và cần biết nên tin, kiểm tra hay dừng chia sẻ.</div>
+              <div class="tags"><span class="tag">KIỂM TRA NGUỒN</span><span class="tag">NHẬN DIỆN DẪN DẮT</span></div>
+              <div class="product-actions">
+                <a class="button button-primary" href="https://www.gocnhinanninhmang.vn/2026/08/cam-nang-nhan-dien-thong-tin-dan-dat-du.html" target="_blank" rel="noopener noreferrer">Xem cẩm nang <svg aria-hidden="true"><use href="#i-external"/></svg></a>
+                <a class="button button-pink" href="https://zalo.me/84769657798" target="_blank" rel="noopener noreferrer">Liên hệ đặt hàng</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section" id="san-pham-thuc-te">
+      <div class="container">
+        <header class="section-head reveal">
+          <div><p class="eyebrow">04 · Sản phẩm thực tế</p><h2>Xem sản phẩm hoạt động thật.</h2></div>
+          <p class="section-intro">Video giúp người xem hiểu ngay cách sử dụng và thành phẩm thực tế.</p>
+        </header>
+        <div class="product-list">
+          <article class="product-card reveal">
+            <div class="product-stage"><video controls playsinline preload="metadata" poster="assets/pump.webp" aria-label="Video máy bơm nhu động"><source src="https://storage.googleapis.com/menu-tamvy/code34/maybomnhudong.mp4" type="video/mp4">Trình duyệt chưa hỗ trợ phát video.</video></div>
+            <div class="product-info">
+              <p class="product-number">Sản phẩm 06 / 07</p>
+              <h3>Máy bơm nhu động thực phẩm</h3>
+              <p class="product-summary">Máy tự bơm lượng chất lỏng ổn định qua ống dẫn, giúp thao tác chiết rót sạch và đều hơn.</p>
+              <div class="plain-answer"><strong>Dùng khi:</strong> Cơ sở cần chiết rót lặp lại và muốn giảm thời gian làm thủ công.</div>
+              <div class="tags"><span class="tag">BƠM ĐỊNH LƯỢNG</span><span class="tag">DỄ VỆ SINH</span></div>
+              <div class="product-actions">
+                <a class="button button-primary" href="https://www.youtube.com/playlist?list=PLXkrQ7vX3Bv8" target="_blank" rel="noopener noreferrer">Xem thêm video <svg aria-hidden="true"><use href="#i-external"/></svg></a>
+                <a class="button button-pink" href="https://zalo.me/84769657798" target="_blank" rel="noopener noreferrer">Liên hệ đặt hàng</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reverse reveal">
+            <div class="product-stage"><video controls playsinline preload="metadata" aria-label="Video bánh flan bỏ sỉ"><source src="https://storage.googleapis.com/menu-tamvy/code34/banhflan.mp4" type="video/mp4">Trình duyệt chưa hỗ trợ phát video.</video></div>
+            <div class="product-info">
+              <p class="product-number">Sản phẩm 07 / 07</p>
+              <h3>Bánh flan bỏ sỉ</h3>
+              <p class="product-summary">Bánh flan mềm mịn làm sẵn cho quán nước, quán ăn và điểm bán muốn nhập về phục vụ.</p>
+              <div class="plain-answer"><strong>Dùng khi:</strong> Quán muốn có thêm món tráng miệng mà không phải tự chuẩn bị mỗi ngày.</div>
+              <div class="tags"><span class="tag">ĐẶT THEO SỐ LƯỢNG</span><span class="tag">TRAO ĐỔI LỊCH GIAO</span></div>
+              <div class="product-actions"><a class="button button-pink" href="https://zalo.me/84769657798" target="_blank" rel="noopener noreferrer">Liên hệ đặt hàng</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-panel reveal">
+          <div><p class="eyebrow">CODE34</p><h2>Cần một sản phẩm tương tự?</h2><p>Gửi nhu cầu thực tế để trao đổi phương án phù hợp, dễ dùng và vừa với cách vận hành hiện tại.</p></div>
+          <a class="button button-pink" href="https://zalo.me/84769657798" target="_blank" rel="noopener noreferrer">Liên hệ qua Zalo <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand"><img class="footer-logo" src="assets/code34-logo.webp" alt="CODE34"><p>Không gian trưng bày những sản phẩm đã được CODE34 phát triển và đưa vào sử dụng.</p></div>
+      <div class="footer-col"><h3>Danh mục</h3><a href="#phan-mem">Phần mềm</a><a href="#web-order">Web Order</a><a href="#cam-nang">Cẩm nang</a><a href="#san-pham-thuc-te">Sản phẩm thực tế</a></div>
+      <div class="visit-counter" aria-live="polite"><span>Lượt xem</span><div class="visit-number" id="visit-count">Đang cập nhật…</div></div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 CODE34</span><span>Sản phẩm được phát triển bởi CODE34</span></div>
+  </footer>
+
+  <script>
+    const menuButton=document.getElementById("menu-button"),navLinks=document.getElementById("nav-links");
+    function setMenu(open){navLinks.classList.toggle("open",open);document.body.classList.toggle("nav-open",open);menuButton.setAttribute("aria-expanded",String(open));menuButton.setAttribute("aria-label",open?"Đóng menu":"Mở menu")}
+    menuButton.addEventListener("click",()=>setMenu(!navLinks.classList.contains("open")));
+    navLinks.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>setMenu(false)));
+    const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("visible");observer.unobserve(entry.target)}})},{threshold:.08});
+    document.querySelectorAll(".reveal").forEach(element=>observer.observe(element));
+    const counterElement=document.getElementById("visit-count");
+    fetch("https://counterapi.com/api/code34vietnam.github.io/view/code34-portfolio?unique=true").then(response=>{if(!response.ok)throw new Error("Counter unavailable");return response.json()}).then(data=>{const value=Number(data.value);counterElement.textContent=Number.isFinite(value)?value.toLocaleString("vi-VN"):"Đang cập nhật"}).catch(()=>{counterElement.textContent="Đang cập nhật"});
+  </script>
+</body>
+</html>
